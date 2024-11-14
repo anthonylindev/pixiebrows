@@ -6,12 +6,96 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card"
 import {ListCollection} from '@/components/ListCollection'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import ServiceCard from '@/components/ServiceCard'
 import {getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop} from '@/lib/fs'
 
 const testimonials = [
   { name: "Sarah L.", text: "Pixie Brows transformed my look completely! The attention to detail is impeccable.", rating: 5 },
   { name: "Emily R.", text: "The most professional and luxurious brow experience I've ever had.", rating: 5 },
   { name: "Jessica T.", text: "Found my forever brow artist! The results are absolutely stunning.", rating: 5 }
+]
+
+const services = [
+  {
+    name: "Eyebrow Shaping",
+    shortDescription: "Expert shaping to enhance your natural brow line.",
+    longDescription: "Our eyebrow shaping service is designed to enhance your natural beauty and frame your face perfectly. Using a combination of waxing, threading, and tweezing techniques, our skilled technicians will create the ideal brow shape to complement your features.",
+    image: "/images/eyebrow-shaping.jpg",
+    priceOptions: [
+      {
+        name: "Basic Shaping",
+        price: "$30",
+        duration: "20-30 minutes",
+        description: "A quick reshape and tidy up of your existing brow shape."
+      },
+      {
+        name: "Full Brow Makeover",
+        price: "$50",
+        duration: "45-60 minutes",
+        description: "A complete redesign of your brow shape, including consultation and styling advice."
+      }
+    ]
+  },
+  {
+    name: "Eyebrow Tinting",
+    shortDescription: "Semi-permanent dye to enhance the color and definition of your brows.",
+    longDescription: "Eyebrow tinting is a semi-permanent dye process that enhances the color and definition of your brows. It's perfect for those with lighter or sparse brows, or anyone looking to achieve a fuller, more defined look without daily makeup application.",
+    image: "/images/eyebrow-tinting.jpg",
+    priceOptions: [
+      {
+        name: "Tinting Only",
+        price: "$25",
+        duration: "15-20 minutes",
+        description: "A quick application of semi-permanent dye to enhance your brow color."
+      },
+      {
+        name: "Tinting with Shaping",
+        price: "$45",
+        duration: "30-40 minutes",
+        description: "Combine tinting with our basic shaping service for a complete brow refresh."
+      }
+    ]
+  },
+  {
+    name: "Microblading",
+    shortDescription: "A semi-permanent tattoo technique for fuller, natural-looking brows.",
+    longDescription: "Microblading is a semi-permanent tattoo technique that creates hair-like strokes to fill in sparse or thinning brows. This advanced procedure is perfect for those looking to reconstruct, define, cover gaps, or fill-in over plucked brows.",
+    image: "/images/microblading.jpg",
+    priceOptions: [
+      {
+        name: "Initial Session",
+        price: "$350",
+        duration: "2-3 hours",
+        description: "Your first microblading session, including consultation, numbing, and the procedure itself."
+      },
+      {
+        name: "Touch-up Session",
+        price: "$150",
+        duration: "1-2 hours",
+        description: "A follow-up session 4-6 weeks after your initial treatment to perfect your results."
+      }
+    ]
+  },
+  {
+    name: "Brow Lamination",
+    shortDescription: "A perm for your brows that helps them stay brushed up and in place.",
+    longDescription: "Brow lamination is a relatively new technique that's best described as a perm for your eyebrows. It's a great, non-invasive alternative to microblading. The treatment works by relaxing the brow hairs so they can be manipulated into your desired shape and position.",
+    image: "/images/brow-lamination.jpg",
+    priceOptions: [
+      {
+        name: "Lamination Only",
+        price: "$70",
+        duration: "45-60 minutes",
+        description: "Our standard brow lamination treatment for a fuller, more polished look."
+      },
+      {
+        name: "Lamination with Tint",
+        price: "$85",
+        duration: "60-75 minutes",
+        description: "Combine lamination with tinting for the ultimate brow transformation."
+      }
+    ]
+  }
 ]
 
 export default async function Home() {
@@ -65,7 +149,7 @@ export default async function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Services</h2>
             <div className="grid gap-8 md:grid-cols-2">
-              {services.map((service, index) => (
+              {/* {services.map((service, index) => (
                 <Card key={index} className="bg-[#FAF5F2] border-none shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="flex flex-col justify-between	 items-start p-6 mt-2 h-56">
                     <div className="w-full	 flex justify-between content-center">
@@ -74,9 +158,11 @@ export default async function Home() {
                     </div>
                     <p className="text-[#2B2B2B]/80 mb-6">{service.info}</p>
                     <p className="text-[#2B2B2B]/80 mb-6">{service.desc}</p>
-                    {/* <Button className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A]">Book Now</Button> */}
                   </CardContent>
                 </Card>
+              ))} */}
+              {services.map((service, index) => (
+                <ServiceCard key={service.id} {...service} />
               ))}
             </div>
           </div>

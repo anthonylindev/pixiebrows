@@ -4,9 +4,9 @@
     "title": "Ombré Powder Brows",
     "info": "Virgin Brows",
     "desc": "A brand new ombré powder brows set. For clients who have never had any previous work done before",
-    "moreInfo": "The first hour of the appointment will be consultation. During this time, we will go over cleaning up the brows and finding the best suitable shape for the client's face based on the amount of hair, bone structure, and symmetry of their face. Once we find the desired shape and it is approved by the client, we will then move onto the tattoo outlining process without numbing. After the outline, the client will be numbed for 15 minutes before moving onto the shading process. This will take about 1.5 hours. Please allow approximately 3-3.5 hours for the entire appointment and do not plan anything directly after the appointment.",
+    "moreInfo": "The first hour of the appointment will be a consultation. During this duration, we will go over cleaning up the brows and finding the best suitable shape for the client's face based on the amount of hair, bone structure, and symmetry of their face. Once we find the desired shape and it is approved by the client, we will then move onto the tattoo outlining process without numbing. After the outline, the client will be numbed for 15 minutes before moving onto the shading process.",
     "price": "$325",
-    "time": "3-3.5 hours",
+    "duration": "3-3.5 hours",
     "painLevel": "Minimal",
     "healingTime": "7-14 days"
   },
@@ -15,10 +15,10 @@
     "title": "Cover-Up/Color Correction",
     "info": "Brows With Previous Work",
     "desc": "For clients with ANY previous work by another artist",
-    "moreInfo": "The first hour of the appointment will be consultation. During this time, we will go over cleaning up the brows and finding the best suitable shape for the client's face based on the amount of hair, bone structure, and symmetry of their face. Once we find the desired shape and it is approved by the client, we will then move onto the tattoo outlining process without numbing. After the outline, the client will be numbed for 15 minutes before moving onto the shading process. This will take about 1.5 hours. Please allow approximately 3-3.5 hours for the entire appointment and do not plan anything directly after the appointment.",
+    "moreInfo": "The first hour of the appointment will be consultation. During this duration, we will go over cleaning up the brows and finding the best suitable shape for the client's face based on the amount of hair, bone structure, and symmetry of their face. Once we find the desired shape and it is approved by the client, we will then move onto the tattoo outlining process without numbing. After the outline, the client will be numbed for 15 minutes before moving onto the shading process.",
     "price": "$425",
-    "time": "3-3.5 hours",
-    "painLevel": "Minimal (Topical anesthetic applied)",
+    "duration": "3-3.5 hours",
+    "painLevel": "Minimal",
     "healingTime": "7-14 days"
   },
   {
@@ -26,10 +26,10 @@
     "title": "Saline Removal",
     "info": "Tattoo Removal",
     "desc": "For those who wish to remove/lighten their previous tattoo",
-    "moreInfo": "Please message me and send me a picture showing both of your bare brows in good lighting before booking! Saline tattoo removal is a safe, natural, chemical-free (no acid) method of removing tattoos using a saline solution and traditional tattooing equipment. This method is less painful/abrasive, gentler on the skin, and faster healing time than laser removal. It can remove almost any color by lifting the pigment out of the dermis, up through the epidermis, then forming a scab that exfoliates with pigment in it. Saline also removes black discoloration caused by the laser. This may take up to 3-6 sessions depending on how dark the previous tattoo was and what the desired results are.",
+    "moreInfo": "Saline tattoo removal is a safe, natural, chemical-free (no acid) method of removing tattoos using a saline solution and traditional tattooing equipment. This method is less painful/abrasive, gentler on the skin, and faster healing duration than laser removal. It can remove almost any color by lifting the pigment out of the dermis, up through the epidermis, then forming a scab that exfoliates with pigment in it. Saline also removes black discoloration caused by the laser. This may take up to 3-6 sessions depending on how dark the previous tattoo was and what the desired results are.",
     "price": "$100 per session",
-    "time": "1 hour",
-    "painLevel": "Minimal (Topical anesthetic applied)",
+    "duration": "1 hour",
+    "painLevel": "Minimal",
     "healingTime": "7-14 days"
   },  
   {
@@ -37,11 +37,9 @@
     "title": "Eyebrow Touch-up",
     "info": "For Existing Clients",
     "desc": "Brow-perfecting sessions",
-    "moreInfo": "All touch-ups are done ONLY for existing clients. If you book this service and you've had work done by another artist, you will be charged a cover-up set (brows with previous work done). Touch-ups are brow-perfecting sessions. Price varies depending on the time-frame since your last session.",
-    "price": "$100 per session",
-    "time": "1-2 hours",
-    "painLevel": "Minimal (Topical anesthetic applied)",
-    "healingTime": "7-14 days",
+    "moreInfo": "All touch-ups are done ONLY for existing clients. If you book this service and you've had work done by another artist, you will be charged a cover-up set (brows with previous work done).",
+    "duration": "1-2 hours",
+    "pricesTitle": "Price varies depending on the time-frame since your last session",
     "prices": [
       {
         "price": "$125",
@@ -61,7 +59,7 @@
       },
       {
         "price": "$225",
-        "desc": "9 months to 1 year"
+        "desc": "9 to 12 months"
       },
       {
         "price": "$250",
@@ -72,7 +70,7 @@
         "desc": "1.5 to 2 years"
       },
       {
-        "price": "New set price",
+        "price": "$325",
         "desc": "2+ years"
       }
     ],

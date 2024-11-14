@@ -9,12 +9,13 @@ export interface Service {
   info: string;
   desc: string;
   moreInfo: string;
-  price: string;
-  time: string;
-  painLevel: string;
-  healingTime: string;
-  prices?: PriceDetail[]; // Optional because not all services include this
-  disclaimer?: string; // Optional because not all services include this
+  price?: string;
+  duration: string;
+  painLevel?: string;
+  healingTime?: string;
+  pricesTitle?: string;
+  prices?: PriceDetail[];
+  disclaimer?: string; 
 }
 
 export interface Policy {
