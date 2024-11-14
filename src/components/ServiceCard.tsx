@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -37,11 +38,17 @@ export default function ServiceCard({
         {/* Front of the card */}
         <div className="absolute w-full h-full [backface-visibility:hidden]">
           <div className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
-            <div className="relative h-48">
-              <img src={image} alt={title} className="w-full h-full object-cover" />
+            <div className="relative h-full w-full">
+              <Image
+                src={'/images/gallery/brow1.jpg'} 
+                alt={title}
+                className="w-full h-full object-cover"
+                objectFit='cover'
+                fill
+              />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-16" />
             </div>
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col flex-grow items-center">
               <h3 className="text-xl font-semibold text-[#8E4E3B] mb-2">{title}</h3>
               <p className="text-[#2B2B2B]/80 mb-4 flex-grow">{desc}</p>
               <Button onClick={flipCard} className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A] transition-colors">

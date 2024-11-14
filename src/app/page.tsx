@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import { MapPin, Phone, Star } from 'lucide-react'
+import ServiceCard from '@/components/ServiceCard'
+import { Gallery } from '@/components/Gallery'
+import { ListCollection } from '@/components/ListCollection'
+
+import {getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop} from '@/lib/fs'
+
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
-import {ListCollection} from '@/components/ListCollection'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import ServiceCard from '@/components/ServiceCard'
-import {getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop} from '@/lib/fs'
 
 const testimonials = [
   { name: "Sarah L.", text: "Pixie Brows transformed my look completely! The attention to detail is impeccable.", rating: 5 },
@@ -25,7 +28,7 @@ export default async function Home() {
   return (
     <div className="bg-[#FAF5F2] min-h-screen">
       <header className="bg-white/80 backdrop-blur-md py-4 fixed w-full z-10 border-b border-[#E8C1B8]">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 flex justify-end md:justify-between items-center">
           {/* <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-sFOi7rBCttqtTr71aOgoEI34LnCFOB.png"
             alt="Pixie Brows"
@@ -39,7 +42,23 @@ export default async function Home() {
             <a href="#testimonials" className="text-[#2B2B2B] hover:text-[#8E4E3B] transition-colors">Testimonials</a>
             <a href="#contact" className="text-[#2B2B2B] hover:text-[#8E4E3B] transition-colors">Contact</a>
           </nav>
-          <Button className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A]">Book Now</Button>
+          {/* <Button className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A]">Book Now</Button> */}
+          <div className='flex items-center gap-2'>
+            <div className="flex h-full p-2">
+              <Phone className="text-[#8E4E3B] mr-3" />
+              <p className="text-[#2B2B2B]">(714) 417-7859</p>
+            </div>
+            <div className='w-8 h-8 relative'>
+              <a href="https://www.instagram.com/pixiebrows.k/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/insta-glyph.png"
+                  alt="instagram profile"
+                  fill
+                  objectFit="cover"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -75,19 +94,7 @@ export default async function Home() {
         <section id="gallery" className="py-24 bg-[#FAF5F2]">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">My Work</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="relative aspect-square group overflow-hidden">
-                  {/* <Image
-                    src={`/placeholder.svg?height=400&width=400&text=Brow+${i+1}`}
-                    alt={`Eyebrow style ${i+1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg transition-transform duration-300 group-hover:scale-105"
-                  /> */}
-                </div>
-              ))}
-            </div>
+            <Gallery />
           </div>
         </section>
 
@@ -179,7 +186,7 @@ export default async function Home() {
                 {faqs.map((faq, index) => (
                   <AccordionItem value={`item-${index}`} key={index} className="border-b border-[#E8C1B8]">
                     <AccordionTrigger className="text-lg text-[#2B2B2B] hover:text-[#8E4E3B]">{faq.question}</AccordionTrigger>
-                    <AccordionContent className="text-lg text-[#2B2B2B]/80">
+                    <AccordionContent className="text-base text-[#2B2B2B]/80">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -199,7 +206,7 @@ export default async function Home() {
               </div>
               <div className="flex items-center">
                 <Phone className="text-[#8E4E3B] mr-3" />
-                <p className="text-[#2B2B2B]">(555) 123-4567</p>
+                <p className="text-[#2B2B2B]">(714) 417-7859</p>
               </div>
             </div>
           </div>
