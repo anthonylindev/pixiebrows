@@ -31,9 +31,8 @@ export default function ServiceCard({
 
   return (
     <div className="relative w-full xl:h-[450px] sm:h-[550px] md:h-[500px] lg:h-[500px] h-[600px] [perspective:1000px]">
-      <motion.div
-        className="w-full h-full [transform-style:preserve-3d] transition-all duration-0"
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
+      <div
+        className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
       >
         {/* Front of the card */}
         <div className="absolute w-full h-full [backface-visibility:hidden]">
@@ -43,12 +42,12 @@ export default function ServiceCard({
                 src={'/images/gallery/brow1.jpg'} 
                 alt={title}
                 className="w-full h-full object-cover"
-                objectFit='cover'
+                style={{objectFit:"cover"}}
                 fill
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-16" />
             </div>
-            <div className="p-6 flex flex-col flex-grow items-center">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold text-[#8E4E3B] mb-2">{title}</h3>
               <p className="text-[#2B2B2B]/80 mb-4 flex-grow">{desc}</p>
               <Button onClick={flipCard} className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A] transition-colors">
@@ -87,7 +86,7 @@ export default function ServiceCard({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

@@ -24,8 +24,8 @@ export const Gallery: React.FC = () => {
         <Image
           src={path}
           alt={`Eyebrow style ${i+1}`}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{objectFit:"cover"}}
           className="rounded-lg transition-transform duration-300 group-hover:scale-105"
         />
       </div>

@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { MapPin, Phone, Star } from 'lucide-react'
+import { Hero } from '@/components/Hero'
 import ServiceCard from '@/components/ServiceCard'
 import { Gallery } from '@/components/Gallery'
 import { ListCollection } from '@/components/ListCollection'
+import Header from '@/components/Header'
 
 import {getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop} from '@/lib/fs'
 
@@ -26,58 +28,11 @@ export default async function Home() {
   const preop = await getPreop()
 
   return (
-    <div className="bg-[#FAF5F2] min-h-screen">
-      <header className="bg-white/80 backdrop-blur-md py-4 fixed w-full z-10 border-b border-[#E8C1B8]">
-        <div className="container mx-auto px-4 flex justify-end md:justify-between items-center">
-          {/* <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-sFOi7rBCttqtTr71aOgoEI34LnCFOB.png"
-            alt="Pixie Brows"
-            width={120}
-            height={40}
-            className="h-10 w-auto"
-          /> */}
-          <nav className="hidden md:flex space-x-6">
-            <a href="#services" className="text-[#2B2B2B] hover:text-[#8E4E3B] transition-colors">Services</a>
-            <a href="#gallery" className="text-[#2B2B2B] hover:text-[#8E4E3B] transition-colors">Gallery</a>
-            <a href="#testimonials" className="text-[#2B2B2B] hover:text-[#8E4E3B] transition-colors">Testimonials</a>
-            <a href="#contact" className="text-[#2B2B2B] hover:text-[#8E4E3B] transition-colors">Contact</a>
-          </nav>
-          {/* <Button className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A]">Book Now</Button> */}
-          <div className='flex items-center gap-2'>
-            <div className="flex h-full p-2">
-              <Phone className="text-[#8E4E3B] mr-3" />
-              <p className="text-[#2B2B2B]">(714) 417-7859</p>
-            </div>
-            <div className='w-8 h-8 relative'>
-              <a href="https://www.instagram.com/pixiebrows.k/" target="_blank" rel="noopener noreferrer">
-                <Image
-                  src="/images/insta-glyph.png"
-                  alt="instagram profile"
-                  fill
-                  objectFit="cover"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main className="pt-16">
-        <section className="relative h-[90vh] flex items-center justify-center bg-[#8E4E3B]">
-          <div className="absolute inset-0 overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=1080&width=1920"
-              alt="Beautiful eyebrows"
-              layout="fill"
-              objectFit="cover"
-              className="opacity-40"
-            />
-          </div>
-          <div className="relative z-1 text-center max-w-3xl px-4">
-            <h2 className="text-5xl md:text-6xl font-light text-white mb-6">Elevate Your Natural Beauty</h2>
-            <p className="text-xl md:text-2xl text-[#F2DED8] mb-8 font-light">Expert eyebrow artistry for the modern, sophisticated you</p>
-            <Button size="lg" className="bg-white text-[#8E4E3B] hover:bg-[#F2DED8]">Book Your Experience</Button>
-          </div>
+    <div id='top' className="bg-[#FAF5F2] min-h-screen">
+      <Header />
+      <main>
+        <section id="hero" className="relative h-[100vh] flex items-center justify-center bg-[#2B1D1A]">
+          <Hero />
         </section>
 
         <section id="services" className="py-24 bg-white">
@@ -119,7 +74,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="py-24 bg-[#FAF5F2]">
+        <section id="info" className="py-24 bg-[#FAF5F2]">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Important Information</h2>
             <Tabs defaultValue="policy" className="w-full">
@@ -178,7 +133,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="py-24 bg-white">
+        <section id="faq" className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Frequently Asked Questions</h2>
             <div className="max-w-3xl mx-auto">
