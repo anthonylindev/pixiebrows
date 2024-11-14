@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "title": "Ombré Powder Brows",
+    "info": "Virgin Brows",
+    "desc": "A brand new ombré powder brows set. For clients who have never had any previous work done before",
+    "moreInfo": "The first hour of the appointment will be consultation. During this time, we will go over cleaning up the brows and finding the best suitable shape for the client's face based on the amount of hair, bone structure, and symmetry of their face. Once we find the desired shape and it is approved by the client, we will then move onto the tattoo outlining process without numbing. After the outline, the client will be numbed for 15 minutes before moving onto the shading process. This will take about 1.5 hours. Please allow approximately 3-3.5 hours for the entire appointment and do not plan anything directly after the appointment.",
+    "price": "$325",
+    "time": "3-3.5 hours",
+    "painLevel": "Minimal",
+    "healingTime": "7-14 days"
+  },
+  {
+    "id": 2,
+    "title": "Cover-Up/Color Correction",
+    "info": "Brows With Previous Work",
+    "desc": "For clients with ANY previous work by another artist",
+    "moreInfo": "The first hour of the appointment will be consultation. During this time, we will go over cleaning up the brows and finding the best suitable shape for the client's face based on the amount of hair, bone structure, and symmetry of their face. Once we find the desired shape and it is approved by the client, we will then move onto the tattoo outlining process without numbing. After the outline, the client will be numbed for 15 minutes before moving onto the shading process. This will take about 1.5 hours. Please allow approximately 3-3.5 hours for the entire appointment and do not plan anything directly after the appointment.",
+    "price": "$425",
+    "time": "3-3.5 hours",
+    "painLevel": "Minimal (Topical anesthetic applied)",
+    "healingTime": "7-14 days"
+  },
+  {
+    "id": 3,
+    "title": "Saline Removal",
+    "info": "Tattoo Removal",
+    "desc": "For those who wish to remove/lighten their previous tattoo",
+    "moreInfo": "Please message me and send me a picture showing both of your bare brows in good lighting before booking! Saline tattoo removal is a safe, natural, chemical-free (no acid) method of removing tattoos using a saline solution and traditional tattooing equipment. This method is less painful/abrasive, gentler on the skin, and faster healing time than laser removal. It can remove almost any color by lifting the pigment out of the dermis, up through the epidermis, then forming a scab that exfoliates with pigment in it. Saline also removes black discoloration caused by the laser. This may take up to 3-6 sessions depending on how dark the previous tattoo was and what the desired results are.",
+    "price": "$100 per session",
+    "time": "1 hour",
+    "painLevel": "Minimal (Topical anesthetic applied)",
+    "healingTime": "7-14 days"
+  },  
+  {
+    "id": 4,
+    "title": "Eyebrow Touch-up",
+    "info": "For Existing Clients",
+    "desc": "Brow-perfecting sessions",
+    "moreInfo": "All touch-ups are done ONLY for existing clients. If you book this service and you've had work done by another artist, you will be charged a cover-up set (brows with previous work done). Touch-ups are brow-perfecting sessions. Price varies depending on the time-frame since your last session.",
+    "price": "$100 per session",
+    "time": "1-2 hours",
+    "painLevel": "Minimal (Topical anesthetic applied)",
+    "healingTime": "7-14 days",
+    "prices": [
+      {
+        "price": "$125",
+        "desc": "6 to 8 weeks"
+      },
+      {
+        "price": "$150",
+        "desc": "2 to 4 months"
+      },
+      {
+        "price": "$175",
+        "desc": "4 to 6 months"
+      },
+      {
+        "price": "$200",
+        "desc": "6 to 9 months"
+      },
+      {
+        "price": "$225",
+        "desc": "9 months to 1 year"
+      },
+      {
+        "price": "$250",
+        "desc": "1 to 1.5 years"
+      },
+      {
+        "price": "$275",
+        "desc": "1.5 to 2 years"
+      },
+      {
+        "price": "New set price",
+        "desc": "2+ years"
+      }
+    ],
+    "disclaimer": "Prices vary depending on how faded your brows are. Brows will be charged as a new set if they are faded over 75%. If color correction is needed, it will be an extra $25."
+  }
+]

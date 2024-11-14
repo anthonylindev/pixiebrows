@@ -1,0 +1,54 @@
+[
+ {
+    "title": "Deposit Policy",
+    "description": "All appointments require a $100 non-refundable, non-transferable deposit to secure your booking. This deposit will be applied toward your service balance. Please note, appointments are not confirmed until the deposit is received—no exceptions."
+  },
+  {
+    "title": "Payment Policy",
+    "description": "The remaining balance is to be paid in cash only on the day of your appointment. A $50 fee will be added if you fail to bring cash and need to pay electronically. In such cases, you will be required to leave a valuable belonging at the studio until cash is retrieved."
+  },
+  {
+    "title": "Late Arrivals",
+    "description": "A $25 late fee will be charged for being 10 minutes late. If you are more than 15 minutes late, your appointment will be canceled, and no refunds will be provided. To reschedule, a new deposit will be required. Please ensure you arrive on time and are inside Suite #205 by your scheduled time—not in the parking lot or outside. Lateness disrupts our schedule and other clients. Respect your brow artist’s time."
+  },
+  {
+    "title": "Final Sales Policy",
+    "description": "All service sales and transactions are final."
+  },
+  {
+    "title": "Rescheduling Policy",
+    "description": "You may reschedule your appointment once only and must provide at least one week’s notice. Failure to do so will result in the forfeit of your deposit, and a new deposit will be required to rebook."
+  },
+  {
+    "title": "Cover-Up or Correction",
+    "description": "If you’ve had prior tattoo work, your service will be treated as a cover-up or correction set, which costs an additional $100 on top of the new set price for virgin brows."
+  },
+  {
+    "title": "Pre-Procedure Responsibility",
+    "description": "Following pre-procedure instructions is essential to ensure the success of your service. Failure to comply will result in forfeiting your deposit, and a new deposit will be required to rebook."
+  },
+  {
+    "title": "Aftercare Compliance",
+    "description": "Proper aftercare is your responsibility. Failure to follow aftercare instructions (e.g., no scratching, picking, or sleeping on your brows) may require a new set at an additional cost."
+  },
+  {
+    "title": "Promotional Rates",
+    "description": "Promotional rates are subject to change if you reschedule your appointment to a later date. Touch-up and new set prices may also vary depending on the timeframe."
+  },
+  {
+    "title": "Cancellations and No-Shows",
+    "description": "Any cancellations will result in the forfeit of your deposit. Cancellations made within one week of the appointment will forfeit the entire deposit. Same-day cancellations or 'no-shows' will be charged the full service price. No exceptions."
+  },
+  {
+    "title": "Right to Refuse Service",
+    "description": "We reserve the right to refuse service to anyone."
+  },
+  {
+    "title": "Inconvenience Fee",
+    "description": "A $50 fee will be charged if you smear, wipe, or touch your eyebrows after shaping has been completed. Please be mindful of your artist’s time and effort."
+  },
+  {
+    "title": "Mask Requirement",
+    "description": "Masks are required upon arrival and must be worn throughout your appointment. Masks must cover your nose. If you do not bring a mask, one can be purchased for $2."
+  }
+]
