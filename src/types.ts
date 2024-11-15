@@ -16,6 +16,7 @@ export interface Service {
   pricesTitle?: string;
   prices?: PriceDetail[];
   disclaimer?: string; 
+  image: string
 }
 
 export interface Policy {

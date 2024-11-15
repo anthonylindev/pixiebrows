@@ -8,7 +8,8 @@
     "price": "$325",
     "duration": "3-3.5 hours",
     "painLevel": "Minimal",
-    "healingTime": "7-14 days"
+    "healingTime": "7-14 days",
+    "image": "/images/gallery/brow12.jpeg"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "price": "$425",
     "duration": "3-3.5 hours",
     "painLevel": "Minimal",
-    "healingTime": "7-14 days"
+    "healingTime": "7-14 days",
+    "image": "/images/gallery/brow10.jpeg"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "price": "$100 per session",
     "duration": "1 hour",
     "painLevel": "Minimal",
-    "healingTime": "7-14 days"
+    "healingTime": "7-14 days",
+    "image": "/images/gallery/brow14.jpeg"
   },  
   {
     "id": 4,
@@ -39,6 +42,7 @@
     "desc": "Brow-perfecting sessions",
     "moreInfo": "All touch-ups are done ONLY for existing clients. If you book this service and you've had work done by another artist, you will be charged a cover-up set (brows with previous work done).",
     "duration": "1-2 hours",
+    "image": "/images/gallery/brow_before_3.jpeg",
     "pricesTitle": "Price varies depending on the time-frame since your last session",
     "prices": [
       {

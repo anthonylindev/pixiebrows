@@ -36,6 +36,7 @@ export default function Header() {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
+        setIsMenuOpen(false)
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -47,28 +48,28 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`fixed w-full z-10 transition-all duration-300 ${
+    <header className={`fixed overflow-hidden w-full z-20 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>      
     <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-16 py-10">
           <div className="w-1/3 md:w-1/4" />
-          <div className={`relative w-64 h-60 my-2 transition-opacity duration-300 ${
-            isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             <a                 
               onClick={(e) => handleClick(e, '#top')}
               href="#hero" 
-              className="flex-shrink-0"
+              className={`w-72 h-24 md:w-56 md:h-64 my-2 transition-opacity duration-300 ${
+            isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo-trim.png"
                 alt="Pixie Brows"
-                fill
                 style={{objectFit:"contain"}}
-                className="h-8 w-auto"
+                sizes='320px'
+                height={1825}
+                width={4183}
+                className='h-full w-full'
               />
             </a>
-          </div>
           <div className={`flex items-center justify-end w-1/3 md:w-1/4 transition-colors duration-300 ${
             isScrolled ? 'text-black' : 'text-white'
           }`}>

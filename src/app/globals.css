@@ -70,7 +70,7 @@ body {
     @apply bg-background text-foreground;
   }
   * {
-    font-family: var(--font-open-sans);
+    font-family: var(--font-montserrat);
   }
   h2 {
     font-family: var(--font-great-vibes)

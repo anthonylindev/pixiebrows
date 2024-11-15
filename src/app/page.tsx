@@ -5,6 +5,7 @@ import ServiceCard from '@/components/ServiceCard'
 import { Gallery } from '@/components/Gallery'
 import { ListCollection } from '@/components/ListCollection'
 import Header from '@/components/Header'
+import ScrollButton from '@/components/ui/ScrollButton'
 
 import {getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop} from '@/lib/fs'
 
@@ -31,8 +32,11 @@ export default async function Home() {
     <div id='top' className="bg-[#FAF5F2] min-h-screen">
       <Header />
       <main>
-        <section id="hero" className="relative h-[100vh] flex items-center justify-center bg-[#2B1D1A]">
+        <section id="hero" className="grid h-[100vh] justify-center align-center place-items-center bg-[#2B1D1A]">
           <Hero />
+          {/* <div className="flex justify-center">
+            <ScrollButton />  
+          </div> */}
         </section>
 
         <section id="services" className="py-24 bg-white">

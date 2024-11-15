@@ -7,10 +7,6 @@ import { ChevronLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {Service} from '@/types'
 
-interface ServiceCardProps extends Service {
-  image?: string
-}
-
 export default function ServiceCard({ 
   title, 
   moreInfo, 
@@ -22,7 +18,7 @@ export default function ServiceCard({
   prices,
   pricesTitle,
   duration
-}: ServiceCardProps) {
+}: Service) {
   const [isFlipped, setIsFlipped] = useState(false)
 
   const flipCard = () => setIsFlipped(!isFlipped)
@@ -39,11 +35,12 @@ export default function ServiceCard({
           <div className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
             <div className="relative h-full w-full">
               <Image
-                src={'/images/gallery/brow1.jpg'} 
+                src={image}
                 alt={title}
                 className="w-full h-full object-cover"
                 style={{objectFit:"cover"}}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-16" />
             </div>
