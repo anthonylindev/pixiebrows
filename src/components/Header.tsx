@@ -48,7 +48,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`fixed overflow-hidden w-full z-20 transition-all duration-300 ${
+    <header className={`fixed overflow-hidden w-screen z-20 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>      
     <div className="container mx-auto px-4">

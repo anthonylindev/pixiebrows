@@ -17,5 +17,3 @@ export default function ScrollButton() {
     </div>
   )
 }
-
-//    className="bg-white text-[#8E4E3B] hover:bg-[#FAF5F2] text-lg px-8 py-3 rounded-full transition-all duration-300 ease-in-out flex items-center space-x-2"

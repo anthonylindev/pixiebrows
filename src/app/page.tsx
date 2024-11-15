@@ -1,18 +1,16 @@
-import Image from 'next/image'
-import { MapPin, Phone, Star } from 'lucide-react'
+import { MapPin, Phone, Star, Mail, Instagram, TwitterIcon as TikTok } from 'lucide-react'
 import { Hero } from '@/components/Hero'
 import ServiceCard from '@/components/ServiceCard'
 import { Gallery } from '@/components/Gallery'
-import { ListCollection } from '@/components/ListCollection'
+import { InfoTabs } from '@/components/InfoTabs'
+import { MapEmbed } from '@/components/MapEmbed'
 import Header from '@/components/Header'
-import ScrollButton from '@/components/ui/ScrollButton'
+import Image from 'next/image'
 
-import {getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop} from '@/lib/fs'
+import { getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop } from '@/lib/fs'
 
-import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const testimonials = [
   { name: "Sarah L.", text: "Pixie Brows transformed my look completely! The attention to detail is impeccable.", rating: 5 },
@@ -29,19 +27,17 @@ export default async function Home() {
   const preop = await getPreop()
 
   return (
-    <div id='top' className="bg-[#FAF5F2] min-h-screen">
+    <div id='top' className="bg-[#FAF5F2] min-h-screen overflow-x-hidden">
       <Header />
       <main>
         <section id="hero" className="grid h-[100vh] justify-center align-center place-items-center bg-[#2B1D1A]">
           <Hero />
-          {/* <div className="flex justify-center">
-            <ScrollButton />  
-          </div> */}
         </section>
 
         <section id="services" className="py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Services</h2>
+            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">Services</h2>
+            <h3 className="text-2xl font-light text-[#ba867b] mb-16 text-center">Call/Text (714) 417-7859 to book!</h3>
             <div className="grid gap-8 md:grid-cols-2">
               {services.map(service => (
                 <ServiceCard key={service.id} {...service} />
@@ -52,14 +48,14 @@ export default async function Home() {
 
         <section id="gallery" className="py-24 bg-[#FAF5F2]">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">My Work</h2>
+            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">My Work</h2>
             <Gallery />
           </div>
         </section>
 
         <section id="testimonials" className="py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Client Stories</h2>
+            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">Client Stories</h2>
             <div className="grid gap-8 md:grid-cols-3">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="bg-[#FAF5F2] border-none shadow-sm">
@@ -79,72 +75,22 @@ export default async function Home() {
         </section>
 
         <section id="info" className="py-24 bg-[#FAF5F2]">
-          <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Important Information</h2>
-            <Tabs defaultValue="policy" className="w-full">
-              <TabsList className="w-full justify-center mb-8 bg-[#FAF5F2]">
-                <TabsTrigger value="policy" className="text-base text-[#2B2B2B] data-[state=active]:text-[#8E4E3B] data-[state=active]:border-[#8E4E3B]">Policy</TabsTrigger>
-                <TabsTrigger value="health" className="text-base text-[#2B2B2B] data-[state=active]:text-[#8E4E3B]  data-[state=active]:border-[#8E4E3B]">Health</TabsTrigger>
-                <TabsTrigger value="preop" className="text-base text-[#2B2B2B] data-[state=active]:text-[#8E4E3B]  data-[state=active]:border-[#8E4E3B]">Pre-op</TabsTrigger>
-                <TabsTrigger value="aftercare" className="text-base text-[#2B2B2B] data-[state=active]:text-[#8E4E3B] data-[state=active]:border-[#8E4E3B]">Aftercare</TabsTrigger>
-              </TabsList>
-              <TabsContent value="policy" className="bg-white p-8 rounded-lg">
-                <ListCollection
-                  data={[{
-                    title: 'Business Policies',
-                    desc: 'By booking any of our services, you agree to abide by the entirety of our business policies outlined below:',
-                    listData: policies.map(policy => ({header: policy.title, info: policy.description}))
-                  }]} 
-                />
-              </TabsContent>
-              <TabsContent value="health" className="bg-white p-8 rounded-lg">
-                <ListCollection
-                  data={[{
-                    title: 'Health Clearance',
-                    desc: "For your safety, please do not book an appointment if you have any of the following conditions:",
-                    listData: health,
-                  }]} 
-                />
-              </TabsContent>
-              <TabsContent value="preop" className="bg-white p-8 rounded-lg">
-                <ListCollection
-                  data={[{
-                    title: 'Pre-op Instructions',
-                    desc: 'Preparation before your appointment is critical! What not to do before your appointment:',
-                    listData: preop.instructions,
-                  },
-                  {
-                    desc: 'In order to avoid excessive bleeding and poor color deposit:',
-                    listData: preop.tips,
-                  }
-                ]} 
-                />
-              </TabsContent>
-              <TabsContent value="aftercare" className="bg-white p-8 rounded-lg">
-                <ListCollection
-                  data={[{
-                    title: 'Aftercare Instructions',
-                    listData: aftercare.aftercareInstructions,
-                    desc: aftercare.importantNote
-                  },
-                  {title: 'What\'s Normal?',
-                    listData: aftercare.whatIsNormal,
-                  }
-                ]} 
-                />
-              </TabsContent>
-            </Tabs>
-          </div>
+          <InfoTabs
+            health={health}
+            preop={preop}
+            policies={policies}
+            aftercare={aftercare}
+          />
         </section>
 
         <section id="faq" className="py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">Frequently Asked Questions</h2>
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
-                  <AccordionItem value={`item-${index}`} key={index} className="border-b border-[#E8C1B8]">
-                    <AccordionTrigger className="text-lg text-[#2B2B2B] hover:text-[#8E4E3B]">{faq.question}</AccordionTrigger>
+                  <AccordionItem value={`item-${index}`} key={index} className="border-b border-[#ba867b]">
+                    <AccordionTrigger className="text-lg text-[#2B2B2B] hover:text-[#ba867b]">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-base text-[#2B2B2B]/80">
                       {faq.answer}
                     </AccordionContent>
@@ -157,15 +103,46 @@ export default async function Home() {
 
         <section id="contact" className="py-24 bg-[#FAF5F2]">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#8E4E3B] mb-16 text-center">Visit Me!</h2>
-            <div className="bg-white rounded-lg p-8 flex flex-col md:flex-row justify-between items-center max-w-3xl mx-auto">
-              <div className="flex items-center mb-4 md:mb-0">
-                <MapPin className="text-[#8E4E3B] mr-3" />
-                <p className="text-[#2B2B2B]">123 Beauty Lane, Style City, ST 12345</p>
-              </div>
-              <div className="flex items-center">
-                <Phone className="text-[#8E4E3B] mr-3" />
-                <p className="text-[#2B2B2B]">(714) 417-7859</p>
+            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">Visit Me!</h2>
+            <div className="bg-white rounded-lg p-8 flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="flex flex-col justify-between">
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-base mb-4 text-[#ba867b]">Location</h3>
+                    <div className="flex items-start mb-2">
+                      <MapPin className="mr-2 text-[#ba867b] flex-shrink-0 mt-1" />
+                      <span>14331 Euclid Street ste 205, Garden Grove, California, USA</span>
+                    </div>
+                    <p className="flex items-center mb-2">
+                      <Phone className="mr-2 text-[#ba867b]" />
+                      (714) 417-7859
+                    </p>
+                  </div>
+                  <div className="mb-8 md:mb-0">
+                    <h3 className="text-2xl font-base mb-4 text-[#ba867b]">Socials</h3>
+                    <div className="flex space-x-4">
+                      <a href="https://www.instagram.com/pixiebrows.k" target="_blank" rel="noopener noreferrer" className="text-[#8E4E3B] hover:text-[#D4A69A] transition-colors">
+                        <Image
+                          src="/images/insta-glyph.png"
+                          height={32}
+                          width={32}
+                          alt="instagram link"
+                        />
+                        <span className="sr-only">Instagram</span>
+                      </a>
+                      <a href="https://www.tiktok.com/@pixiebrowsbykelly" target="_blank" rel="noopener noreferrer" className="text-[#8E4E3B] hover:text-[#D4A69A] transition-colors">
+                        <Image
+                          src="/images/tiktok.png"
+                          height={32}
+                          width={32}
+                          alt="tiktok link"
+                        />
+                        <span className="sr-only">TikTok</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <MapEmbed />
               </div>
             </div>
           </div>
@@ -174,13 +151,6 @@ export default async function Home() {
 
       <footer className="bg-white py-8 border-t border-[#E8C1B8]">
         <div className="container mx-auto px-4 text-center text-[#2B2B2B]/80">
-          {/* <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-sFOi7rBCttqtTr71aOgoEI34LnCFOB.png"
-            alt="Pixie Brows"
-            width={100}
-            height={33}
-            className="h-8 w-auto mx-auto mb-4"
-          /> */}
           <p>&copy; 2024 Pixie Brows. All rights reserved.</p>
         </div>
       </footer>

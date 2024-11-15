@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { ChevronLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {Service} from '@/types'
@@ -45,9 +44,9 @@ export default function ServiceCard({
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-16" />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-semibold text-[#8E4E3B] mb-2">{title}</h3>
+              <h3 className="text-xl font-semibold text-[#ba867b] mb-2">{title}</h3>
               <p className="text-[#2B2B2B]/80 mb-4 flex-grow">{desc}</p>
-              <Button onClick={flipCard} className="bg-[#8E4E3B] text-white hover:bg-[#D4A69A] transition-colors">
+              <Button onClick={flipCard} className="bg-[#ba867b] text-white hover:bg-[#D4A69A] transition-colors">
                 Learn More
               </Button>
             </div>
@@ -61,7 +60,7 @@ export default function ServiceCard({
               <button onClick={flipCard} className="left-0 absolute text-[#8E4E3B] hover:text-[#D4A69A] transition-colors">
                 <ChevronLeft size={24} />
               </button>
-              <h3 className="text-xl font-semibold text-[#8E4E3B]">{title}</h3>
+              <h3 className="text-xl font-semibold text-[#ba867b]">{title}</h3>
             </div>
             <div className=" lg:block mb-4 flex-grow overflow-y-auto">
               <p className="text-[#2B2B2B]/80">{moreInfo}</p>
@@ -70,16 +69,16 @@ export default function ServiceCard({
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4'>
               {prices?.map((price, index) => (
                   <div key={index} className="mb-4">
-                    <h5 className="font-semibold text-[#8E4E3B]">{price.desc}</h5>
+                    <h5 className="font-semibold text-[#ba867b]">{price.desc}</h5>
                     <p className="text-[#2B2B2B]/80">Price: {price.price}</p>
                   </div>
                 ))}
             </div>
             <div className="mt-auto">
-              {price && <p className="text-[#8E4E3B] font-semibold">Price: {price}</p>}
-              <p className="text-[#8E4E3B]">Duration: {duration}</p>
-              {painLevel && <p className="text-[#8E4E3B]">Pain Level: {painLevel}</p>}
-              {healingTime && <p className="text-[#8E4E3B]">Healing Time: {healingTime}</p>}
+              {price && <p className="text-[#ba867b] font-semibold">Price: {price}</p>}
+              <p className="text-[#ba867b]">Duration: {duration}</p>
+              {painLevel && <p className="text-[#ba867b]">Pain Level: {painLevel}</p>}
+              {healingTime && <p className="text-[#ba867b]">Healing Time: {healingTime}</p>}
             </div>
           </div>
         </div>
