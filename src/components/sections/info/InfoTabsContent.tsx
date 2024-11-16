@@ -1,16 +1,15 @@
 import React from 'react'
-import { ListCollection } from '@/components/ListCollection'
+import { ListCollection } from '@/components/sections/info/ListCollection'
 import { TabsContent } from "@/components/ui/tabs"
-import { Aftercare, Policy, Preop } from '@/types'
+import { getPolicies, getAftercare, getHealth, getPreop } from '@/lib/fs'
 
-interface InfoTabsContentProps {
-  aftercare: Aftercare
-  policies: Policy[]
-  preop: Preop
-  health: string[]
-}
+export const InfoTabsContent: React.FC = async () => {
 
-export const InfoTabsContent: React.FC<InfoTabsContentProps> = ({ aftercare, policies, preop, health }) => {
+  const policies = await getPolicies()
+  const aftercare = await getAftercare()
+  const health = await getHealth()
+  const preop = await getPreop()
+
   return (
     <>
       <TabsContent value="policy" className="bg-white p-8 rounded-lg">

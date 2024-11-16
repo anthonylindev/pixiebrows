@@ -1,7 +1,7 @@
 import React from "react";
 import Image from 'next/image'
 import { MapPin, Phone } from 'lucide-react'
-import { MapEmbed } from '@/components/MapEmbed'
+import { MapEmbed } from '@/components/ui/MapEmbed'
 
 export const Contact: React.FC = () => {
   return (

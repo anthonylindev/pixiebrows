@@ -1,15 +1,11 @@
 import { Star } from 'lucide-react'
-import { Hero } from '@/components/Hero'
-import ServiceCard from '@/components/ServiceCard'
-import { Gallery } from '@/components/Gallery'
-import { InfoTabsContent } from '@/components/InfoTabsContent'
-import { Contact } from '@/components/Contact'
-import Header from '@/components/Header'
-
-import { InfoTabsWrapper } from '@/components/InfoTabsWrapper'
-import { getServices, getPolicies, getFaqs, getAftercare, getHealth, getPreop } from '@/lib/fs'
-
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Hero } from '@/components/sections/Hero'
+import { Gallery } from '@/components/sections/Gallery'
+import { Contact } from '@/components/sections/Contact'
+import { Services } from '@/components/sections/services/Services'
+import { Faqs } from '@/components/sections/Faqs'
+import Header from '@/components/ui/Header'
+import { InfoTabs } from '@/components/sections/info/InfoTabs'
 import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
@@ -19,13 +15,6 @@ const testimonials = [
 ]
 
 export default async function Home() {
-  const services = await getServices()
-  const policies = await getPolicies()
-  const faqs = await getFaqs()
-  const aftercare = await getAftercare()
-  const health = await getHealth()
-  const preop = await getPreop()
-
   return (
     <div id='top' className="bg-[#FAF5F2] min-h-screen overflow-x-hidden">
       <Header />
@@ -35,22 +24,11 @@ export default async function Home() {
         </section>
 
         <section id="services" className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">Services</h2>
-            <h3 className="text-2xl font-light text-[#ba867b] mb-16 text-center">Call/Text (714) 417-7859 to book!</h3>
-            <div className="grid gap-8 md:grid-cols-2">
-              {services.map(service => (
-                <ServiceCard key={service.id} {...service} />
-              ))}
-            </div>
-          </div>
+          <Services />
         </section>
 
         <section id="gallery" className="py-24 bg-[#FAF5F2]">
-          <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">My Work</h2>
-            <Gallery />
-          </div>
+          <Gallery />
         </section>
 
         <section id="testimonials" className="py-24 bg-white">
@@ -75,42 +53,17 @@ export default async function Home() {
         </section>
 
         <section id="info" className="py-24 bg-[#FAF5F2]">
-          <InfoTabsWrapper tabs={[
-            { value: 'policy', title: 'Policy' },
-            { value: 'health', title: 'Health' },
-            { value: 'preop', title: 'Pre-op' },
-            { value: 'aftercare', title: 'Aftercare' }
-          ]}>
-            <InfoTabsContent
-              health={health}
-              preop={preop}
-              policies={policies}
-              aftercare={aftercare}
-            />
-          </InfoTabsWrapper>
+          <InfoTabs />
         </section>
 
         <section id="faq" className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-light text-[#ba867b] mb-16 text-center">Frequently Asked Questions</h2>
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem value={`item-${index}`} key={index} className="border-b border-[#ba867b]">
-                    <AccordionTrigger className="text-lg text-[#2B2B2B] hover:text-[#ba867b]">{faq.question}</AccordionTrigger>
-                    <AccordionContent className="text-base text-[#2B2B2B]/80">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
+          <Faqs />
         </section>
 
         <section id="contact" className="py-24 bg-[#FAF5F2]">
           <Contact />
         </section>
+
       </main>
 
       <footer className="bg-white py-8 border-t border-[#E8C1B8]">

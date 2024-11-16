@@ -10,7 +10,7 @@ interface InfoTabsWrapperProps {
 }
 
 export const InfoTabsWrapper: React.FC<InfoTabsWrapperProps> = ({ children, tabs }) => {
-  const [activeTab, setActiveTab] = useState('policy')
+  const [activeTab, setActiveTab] = useState(tabs[0].value)
 
   return (
     <div className="container mx-auto px-4">
