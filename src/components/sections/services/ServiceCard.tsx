@@ -15,8 +15,11 @@ export default function ServiceCard(service: Service) {
       />
     )
   }
-  const props = { ...service, renderImage: renderImage() }
+
   return (
-    <ServiceCardContent {...props} />
+    <ServiceCardContent
+      {...service}
+      renderImage={renderImage()}
+    />
   )
 }

@@ -43,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${greatVibes.variable} ${openSans.variable} ${montserrat.variable} antialiased`}
       >
+        <link rel="icon" href="/icon.svg" sizes="any" />
         {children}
       </body>
     </html>

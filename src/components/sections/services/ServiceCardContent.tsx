@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image from 'next/image'
 import { ChevronLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Service } from '@/types'

@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path'
-import {Service, Faq, Policy, Aftercare, Preop} from '@/types'
+import { Service, Faq, Policy, Aftercare, Preop, DirectMessage } from '@/types'
 
 async function getJsonData<T>(filePath: string): Promise<T> {
   const jsonData = await fs.readFile(filePath);
@@ -36,4 +36,9 @@ export async function getHealth() {
 export async function getPreop() {
   const filePath = path.join(process.cwd(), 'src/json/preop.json');
   return await getJsonData<Preop>(filePath)
+}
+
+export async function getDms() {
+  const filePath = path.join(process.cwd(), 'src/json/dms.json');
+  return await getJsonData<DirectMessage[][]>(filePath)
 }

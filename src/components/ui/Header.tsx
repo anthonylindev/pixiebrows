@@ -10,6 +10,7 @@ import Image from 'next/image'
 const navItems = [
   { name: 'Services', href: '#services' },
   { name: 'Gallery', href: '#gallery' },
+  { name: 'Reviews', href: '#dms' },
   { name: 'Info', href: '#info' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Contact', href: '#contact' },
@@ -48,7 +49,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`fixed overflow-hidden w-screen z-20 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+    <header className={`fixed overflow-hidden w-screen z-20 transition-custom duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
       }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-16 py-10">
@@ -70,15 +71,15 @@ export default function Header() {
           </a>
           <div className={`flex items-center justify-end w-1/3 md:w-1/4 transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'
             }`}>
-            <nav className="hidden lg:flex lg:right-0 lg:absolute space-x-4 pr-32">
+            <nav className="hidden xl:flex xl:right-0 xl:absolute space-x-4 xl:pr-32">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                   className={`text-md font-medium capitalize transition-colors duration-300 ${isScrolled
-                      ? 'text-gray-700 hover:text-[#8E4E3B]'
-                      : 'text-white hover:text-[#D4A69A]'
+                    ? 'text-gray-700 hover:text-[#8E4E3B]'
+                    : 'text-white hover:text-[#D4A69A]'
                     }`}
                 >
                   {item.name}
@@ -86,7 +87,7 @@ export default function Header() {
               ))}
             </nav>
           </div>
-          <div className={`lg:hidden right-0 absolute pr-4 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          <div className={`xl:hidden right-0 absolute pr-4 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}>
             <Button
               variant="ghost"
@@ -100,7 +101,7 @@ export default function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
