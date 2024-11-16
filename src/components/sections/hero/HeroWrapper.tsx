@@ -40,7 +40,6 @@ export const HeroWrapper = ({ children, logo }: { children?: React.ReactNode, lo
             alt={`Hero background ${index + 1}`}
             fill
             style={{ objectFit: "cover" }}
-            priority={index === 0}
             sizes="100vw, 100vh"
             onLoad={() => setIsLoaded(true)}
           />

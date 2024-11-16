@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react'
 import { Hero } from '@/components/sections/hero/Hero'
-import { Gallery } from '@/components/sections/Gallery'
+import { Gallery } from '@/components/gallery/Gallery'
 import { Contact } from '@/components/sections/Contact'
 import { Services } from '@/components/sections/services/Services'
 import { Faqs } from '@/components/sections/Faqs'
@@ -16,7 +16,7 @@ const testimonials = [
 
 export default async function Home() {
   return (
-    <div id='top' className="bg-[#FAF5F2] min-h-screen overflow-x-hidden">
+    <div id='home' className="bg-[#FAF5F2] min-h-screen overflow-x-hidden">
       <Header />
       <main>
         <section id="hero" className="grid h-[100vh] justify-center align-center place-items-center bg-[#2B1D1A]">

@@ -1,5 +1,5 @@
 import { getServices } from '@/lib/fs'
-import ServiceCard from '@/components/sections/services/ServiceCard'
+import ServiceCard from './ServiceCard'
 
 export const Services = async () => {
   const services = await getServices()

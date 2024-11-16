@@ -48,51 +48,46 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`fixed overflow-hidden w-screen z-20 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-    }`}>      
-    <div className="container mx-auto px-4">
+    <header className={`fixed overflow-hidden w-screen z-20 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}>
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-16 py-10">
           <div className="w-1/3 md:w-1/4" />
-            <a                 
-              onClick={(e) => handleClick(e, '#top')}
-              href="#hero" 
-              className={`w-72 h-24 md:w-56 md:h-64 my-2 transition-opacity duration-300 ${
-            isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-            >
-              <Image
-                src="/images/logo-trim.png"
-                alt="Pixie Brows"
-                style={{objectFit:"contain"}}
-                sizes='320px'
-                height={1825}
-                width={4183}
-                className='h-full w-full'
-              />
-            </a>
-          <div className={`flex items-center justify-end w-1/3 md:w-1/4 transition-colors duration-300 ${
-            isScrolled ? 'text-black' : 'text-white'
-          }`}>
+          <a
+            onClick={(e) => handleClick(e, '#home')}
+            href="#hero"
+            className={`w-72 h-24 md:w-56 md:h-64 my-2 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          >
+            <Image
+              src="/images/logo-trim.png"
+              alt="Pixie Brows"
+              style={{ objectFit: "contain" }}
+              sizes='320px'
+              height={1825}
+              width={4183}
+              className='h-full w-full'
+            />
+          </a>
+          <div className={`flex items-center justify-end w-1/3 md:w-1/4 transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'
+            }`}>
             <nav className="hidden lg:flex lg:right-0 lg:absolute space-x-4 pr-32">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className={`text-md font-medium capitalize transition-colors duration-300 ${
-                    isScrolled
+                  className={`text-md font-medium capitalize transition-colors duration-300 ${isScrolled
                       ? 'text-gray-700 hover:text-[#8E4E3B]'
                       : 'text-white hover:text-[#D4A69A]'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </a>
               ))}
             </nav>
           </div>
-          <div className={`lg:hidden right-0 absolute pr-4 transition-opacity duration-300 ${
-            isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}>
+          <div className={`lg:hidden right-0 absolute pr-4 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}>
             <Button
               variant="ghost"
               size="icon"
