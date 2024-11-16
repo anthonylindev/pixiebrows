@@ -23,7 +23,7 @@ export const HeroWrapper = ({ children, logo }: { children?: React.ReactNode, lo
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 3000)
+    }, 4000)
 
     const checkImagesLoaded = () => {
       const allLoaded = imageRefs.current.every((img) => img && img.complete)
