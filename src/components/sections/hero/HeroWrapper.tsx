@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export const HeroWrapper = ({ children, logo }: { children?: React.ReactNode, logo: React.ReactNode }) => {
@@ -18,12 +18,27 @@ export const HeroWrapper = ({ children, logo }: { children?: React.ReactNode, lo
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
 
+  const imageRefs = useRef<(HTMLImageElement | null)[]>([])
+
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
     }, 3000)
+
+    const checkImagesLoaded = () => {
+      const allLoaded = imageRefs.current.every((img) => img && img.complete)
+      if (allLoaded) {
+        setIsLoaded(true)
+      }
+    }
+
+    checkImagesLoaded()
     return () => clearInterval(imageInterval)
   }, [])
+
+  const handleImageLoad = (index: number) => (event: React.SyntheticEvent<HTMLImageElement>) => {
+    imageRefs.current[index] = event.currentTarget
+  }
 
   return (
     <div className='flex flex-col justify-center items-center overflow-hidden relative w-screen h-screen'>
@@ -40,8 +55,8 @@ export const HeroWrapper = ({ children, logo }: { children?: React.ReactNode, lo
             alt={`Hero background ${index + 1}`}
             fill
             style={{ objectFit: "cover" }}
-            sizes="100vw, 100vh"
-            onLoad={() => setIsLoaded(true)}
+            sizes="100vw"
+            onLoad={() => handleImageLoad(index)}
           />
         </div>
       ))}

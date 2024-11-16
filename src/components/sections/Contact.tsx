@@ -2,6 +2,7 @@ import React from "react";
 import Image from 'next/image'
 import { MapPin, Phone } from 'lucide-react'
 import { MapEmbed } from '@/components/ui/MapEmbed'
+import { PhoneNumber } from '@/components/ui/PhoneNumber'
 
 export const Contact: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const Contact: React.FC = () => {
               </div>
               <p className="flex items-center mb-2">
                 <Phone className="mr-2 text-[#ba867b]" />
-                (714) 417-7859
+                <PhoneNumber />
               </p>
             </div>
             <div className="mb-8 md:mb-0">
