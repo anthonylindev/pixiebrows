@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-import { Playfair_Display, Great_Vibes, Open_Sans, Montserrat } from 'next/font/google';
-
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: '700', // Use bold for headings
-  variable: '--font-playfair',
-});
+import { Great_Vibes, Montserrat } from 'next/font/google';
 
 const greatVibes = Great_Vibes({
   subsets: ['latin'],
@@ -16,11 +9,6 @@ const greatVibes = Great_Vibes({
   weight: '400'
 });
 
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-open-sans',
-});
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -30,7 +18,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Pixiebrows by Kelly",
-  description: "Ombre powder brow artist",
+  description: "Ombre powder brow artist serving Orange County, CA",
 };
 
 export default function RootLayout({
@@ -41,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${greatVibes.variable} ${openSans.variable} ${montserrat.variable} antialiased`}
+        className={`${greatVibes.variable} ${montserrat.variable} antialiased`}
       >
         <link rel="icon" href="/icon.svg" sizes="any" />
         {children}

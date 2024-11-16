@@ -1,8 +1,8 @@
-import { Playfair_Display, Great_Vibes, Open_Sans } from 'next/font/google';
+import { Playfair_Display, Great_Vibes } from 'next/font/google';
 
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  weight: '700', // Use bold for headings
+  weight: '700',
   variable: '--font-playfair',
 });
 
@@ -12,10 +12,5 @@ const greatVibes = Great_Vibes({
   weight: '400'
 });
 
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-open-sans',
-});
 
-export { openSans, playfairDisplay, greatVibes }
+export { playfairDisplay, greatVibes }

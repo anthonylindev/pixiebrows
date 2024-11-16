@@ -1,4 +1,3 @@
-import { Star } from 'lucide-react'
 import { Hero } from '@/components/sections/hero/Hero'
 import { Gallery } from '@/components/sections/gallery/Gallery'
 import { Contact } from '@/components/sections/Contact'
@@ -7,13 +6,6 @@ import { Faqs } from '@/components/sections/Faqs'
 import { Dms } from '@/components/sections/Dms'
 import Header from '@/components/ui/Header'
 import { InfoTabs } from '@/components/sections/info/InfoTabs'
-import { Card, CardContent } from "@/components/ui/card"
-
-const testimonials = [
-  { name: "Sarah L.", text: "Pixie Brows transformed my look completely! The attention to detail is impeccable.", rating: 5 },
-  { name: "Emily R.", text: "The most professional and luxurious brow experience I've ever had.", rating: 5 },
-  { name: "Jessica T.", text: "Found my forever brow artist! The results are absolutely stunning.", rating: 5 }
-]
 
 export default async function Home() {
   return (
@@ -23,33 +15,25 @@ export default async function Home() {
         <section id="hero" className="grid h-[100vh] justify-center align-center place-items-center bg-[#2B1D1A]">
           <Hero />
         </section>
-
         <section id="services" className="py-24 bg-white">
           <Services />
         </section>
-
         <section id="gallery" className="py-24 bg-[#FAF5F2]">
           <Gallery />
         </section>
-
         <section id="dms" className="py-24 bg-white">
           <Dms />
         </section>
-
         <section id="info" className="py-24 bg-[#FAF5F2]">
           <InfoTabs />
         </section>
-
         <section id="faq" className="py-24 bg-white">
           <Faqs />
         </section>
-
         <section id="contact" className="py-24 bg-[#FAF5F2]">
           <Contact />
         </section>
-
       </main>
-
       <footer className="bg-white py-8 border-t border-[#E8C1B8]">
         <div className="container mx-auto px-4 text-center text-[#2B2B2B]/80">
           <p>&copy; 2024 Pixie Brows. All rights reserved.</p>
