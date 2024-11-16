@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react'
-import { Hero } from '@/components/sections/Hero'
+import { Hero } from '@/components/sections/hero/Hero'
 import { Gallery } from '@/components/sections/Gallery'
 import { Contact } from '@/components/sections/Contact'
 import { Services } from '@/components/sections/services/Services'

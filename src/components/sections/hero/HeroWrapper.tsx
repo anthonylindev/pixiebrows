@@ -1,9 +1,8 @@
 'use client'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import ScrollButton from '@/components/ui/ScrollButton'
 
-export const Hero = () => {
+export const HeroWrapper = ({ children, logo }: { children?: React.ReactNode, logo: React.ReactNode }) => {
 
   const images = [
     '/images/gallery/brow10.jpeg',
@@ -17,6 +16,7 @@ export const Hero = () => {
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     const imageInterval = setInterval(() => {
@@ -27,11 +27,13 @@ export const Hero = () => {
 
   return (
     <div className='flex flex-col justify-center items-center overflow-hidden relative w-screen h-screen'>
+      <div className={`absolute inset-0  opacity-40 ${isLoaded ? 'hidden' : 'visible'}`}>
+        {children}
+      </div>
       {images.map((image, index) => (
         <div
           key={image}
-          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-40' : 'opacity-0'
-            }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-40' : 'opacity-0'} ${isLoaded ? 'visible' : 'hidden'}`}
         >
           <Image
             src={image}
@@ -40,21 +42,11 @@ export const Hero = () => {
             style={{ objectFit: "cover" }}
             priority={index === 0}
             sizes="100vw, 100vh"
+            onLoad={() => setIsLoaded(true)}
           />
         </div>
       ))}
-      <div className="flex flex-col items-center justify-center">
-        <Image
-          src="/images/logo-lg.png"
-          alt="Pixie Brows - Orange County Brow Artist"
-          width={1775}
-          height={802}
-          className="w-11/12 md:w-full max-w-2xl md:max-w-3xl mx-auto animate-scale-in opacity-100 z-10 will-change-transform"
-          priority
-          sizes="100vh, 100vw"
-        />
-        <ScrollButton />
-      </div>
+      {logo}
     </div>
   )
 }
