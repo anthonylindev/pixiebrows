@@ -15,7 +15,7 @@ export interface Service {
   healingTime?: string;
   pricesTitle?: string;
   prices?: PriceDetail[];
-  disclaimer?: string; 
+  disclaimer?: string;
   image: string
 }
 
@@ -39,3 +39,10 @@ export interface Preop {
   instructions: string[];
   tips: string[]
 }
+
+export interface DirectMessage {
+  messageText: string;
+  fromClient: boolean;
+}
+
+export type DmJson = DirectMessage[][]

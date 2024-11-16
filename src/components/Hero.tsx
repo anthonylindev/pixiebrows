@@ -21,25 +21,23 @@ export const Hero = () => {
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 5000)
+    }, 3000)
     return () => clearInterval(imageInterval)
   }, [])
-  
+
   return (
     <div className='flex flex-col justify-center items-center overflow-hidden relative w-screen h-screen'>
       {images.map((image, index) => (
         <div
           key={image}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentImageIndex ? 'opacity-40' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-40' : 'opacity-0'
+            }`}
         >
           <Image
             src={image}
-            // className="opacity-40"
             alt={`Hero background ${index + 1}`}
             fill
-            style={{objectFit:"cover"}}
+            style={{ objectFit: "cover" }}
             priority={index === 0}
             sizes="100vw, 100vh"
           />
@@ -55,7 +53,7 @@ export const Hero = () => {
           priority
           sizes="100vh, 100vw"
         />
-          <ScrollButton />  
+        <ScrollButton />
       </div>
     </div>
   )
