@@ -25,8 +25,8 @@ export const Gallery: React.FC = () => {
   return (
     <GalleryItems
       imagePaths={images}
-      images={images.map(imagePath => (
-        <GalleryImage src={imagePath} />
+      images={images.map((imagePath, index) => (
+        <GalleryImage key={index} src={imagePath} />
       ))}
     />
   )

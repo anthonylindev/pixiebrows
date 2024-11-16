@@ -24,7 +24,7 @@ export const GalleryItems = ({ images, imagePaths }: { images: React.ReactNode[]
               <VisuallyHidden.Root>
                 <DialogTitle>Brows</DialogTitle>
                 <DialogDescription>
-                  Image of client's eyebrows
+                  Image of client&#39;s eyebrows
                 </DialogDescription>
               </VisuallyHidden.Root>
               <DialogPrimitive.Close className="relative w-full h-[calc(90vh-100px)] cursor-default">

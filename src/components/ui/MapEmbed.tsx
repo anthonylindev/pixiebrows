@@ -21,7 +21,7 @@ export const MapEmbed = () => {
       )}
       {isError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 flex-col">
-          <p>Couldn't load map :(</p>
+          <p>Couldn&#39;t load map :(</p>
         </div>
       )}
       <iframe
