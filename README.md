@@ -2,7 +2,7 @@
 
 A modern and responsive landing page website designed for a small eyebrow artist's business.
 
-🚀 Check out the live website here: [Pixiebrows by Kelly](https://your-vercel-deployment-url.vercel.app)
+🚀 Check out the live website here: [Pixiebrows by Kelly](https://pixiebrowsbykelly.com)
 
 ## Features
 
