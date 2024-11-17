@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Pixiebrows by Kelly",
-  description: "Ombre powder brow artist serving Orange County, CA",
+  description: "Ombré powder brow artist serving Orange County, CA",
 };
 
 export default function RootLayout({
