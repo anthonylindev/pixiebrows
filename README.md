@@ -1,7 +1,8 @@
 # Pixiebrows by Kelly Landing Page
 
 A modern and responsive landing page website designed for a small eyebrow artist's business.
-Check out the live website here: [Pixiebrows by Kelly](https://your-vercel-deployment-url.vercel.app)
+
+🚀 Check out the live website here: [Pixiebrows by Kelly](https://your-vercel-deployment-url.vercel.app)
 
 ## Features
 
@@ -23,9 +24,9 @@ Check out the live website here: [Pixiebrows by Kelly](https://your-vercel-deplo
 
 ## Technologies Used
 
-- **[Next.js](https://nextjs.org/)**: React framework for server-side rendering and static site generation.
-- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for styling.
-- **[Vercel](https://vercel.com/)**: Deployment platform for high-performance web applications.
+- **[Next.js](https://nextjs.org/)**
+- **[Tailwind CSS](https://tailwindcss.com/)**
+- **[Vercel](https://vercel.com/)**
 
 ---
 
@@ -35,5 +36,15 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/anthonylindev/pixiebrows.git
+   cd pixiebrows
+   ```
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start development server**
+    ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:8080) in your browser to see the result.
