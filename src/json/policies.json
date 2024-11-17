@@ -1,5 +1,5 @@
 [
- {
+  {
     "title": "Deposit Policy",
     "description": "All appointments require a $100 non-refundable, non-transferable deposit to secure your booking. This deposit will be applied toward your service balance. Please note, appointments are not confirmed until the deposit is received—no exceptions."
   },
@@ -46,9 +46,5 @@
   {
     "title": "Inconvenience Fee",
     "description": "A $50 fee will be charged if you smear, wipe, or touch your eyebrows after shaping has been completed. Please be mindful of your artist’s time and effort."
-  },
-  {
-    "title": "Mask Requirement",
-    "description": "Masks are required upon arrival and must be worn throughout your appointment. Masks must cover your nose. If you do not bring a mask, one can be purchased for $2."
   }
 ]

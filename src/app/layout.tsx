@@ -31,8 +31,9 @@ export default function RootLayout({
       <body
         className={`${greatVibes.variable} ${montserrat.variable} antialiased`}
       >
-        <link rel="icon" href="/icon.svg" sizes="any" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" href="images/icon.svg" sizes="any" type="image/svg+xml" />
+        <link rel="icon" href="images/icon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" type="image/png" />
         {children}
         <Analytics />
       </body>
