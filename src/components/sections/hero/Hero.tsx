@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
 
   const renderLogo = () => {
     return (
-      <ol className="h-full grid grid-rows-[1fr_auto_1fr] gap-1 justify-items-center grid-flow-col p-0 m-0 list-none text-white">
+      <ol className="h-full grid grid-rows-[1fr_auto_1fr] gap-12 justify-items-center grid-flow-col p-0 m-0 list-none text-white">
         <li className="row-start-2">
           <Image
             src="/images/logo-lg.png"
