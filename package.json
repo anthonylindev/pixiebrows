@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8080 --turbopack",
+    "dev": "next dev -p 8081 --turbopack",
     "build": "next build",
     "start": "next start -p 8081",
     "lint": "next lint"
@@ -15,6 +15,7 @@
     "@radix-ui/react-tabs": "^1.1.1",
     "@radix-ui/react-visually-hidden": "^1.1.0",
     "@vercel/analytics": "^1.4.0",
+    "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.456.0",

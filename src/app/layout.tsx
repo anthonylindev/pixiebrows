@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Great_Vibes, Montserrat } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const greatVibes = Great_Vibes({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" type="image/png" />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
