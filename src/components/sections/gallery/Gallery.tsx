@@ -40,7 +40,7 @@ const GalleryImage = ({ src }: { src: string }) => {
       fill
       style={{ objectFit: "cover" }}
       className="transition-transform duration-300 hover:scale-110"
-      sizes="100vw, 50vw, 33vw"
+      sizes="50vw, 33vw"
     />
   )
 }
